@@ -18,16 +18,6 @@ const modalIngredients = document.getElementById("modal-ingredients");
 const modalInstructions = document.getElementById("modal-instructions");
 const modalLinks = document.getElementById("modal-links");
 
-// ===== Favorites (localStorage) =====
-const FAV_KEY = "rf_favs_v1";
-const getFavs = () => JSON.parse(localStorage.getItem(FAV_KEY) || "[]");
-const setFavs = (ids) => localStorage.setItem(FAV_KEY, JSON.stringify(ids));
-const toggleFav = (id) => {
-  const s = new Set(getFavs());
-  s.has(id) ? s.delete(id) : s.add(id);
-  setFavs([...s]);
-};
-
 // ===== Utilities =====
 const setStatus = (msg = "") => statusEl.textContent = msg;
 const normalizeIngredients = (raw) =>
@@ -47,9 +37,6 @@ async function fetchMealsByIngredient(ingredient) {
 
 
 async function fetchMealById(id) {
-  console.log(id);
-  const url = `${API_BASE}/lookup.php?i=${encodeURIComponent(id)}`
-  console.log(url);
   const res = await fetch(url);
   const data = await res.json()
   //console.log(data.meals); //idk what type of variable this is

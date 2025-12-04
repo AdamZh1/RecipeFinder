@@ -1,0 +1,20 @@
+{
+  "name": "recipefinder",
+  "version": "1.0.0",
+  "description": "Application to find recipes based on given ingredients",
+  "main": "script.js",
+  "scripts": {
+    "test": "\"echo \\\"Error: no test specified\\\" && exit 1\"",
+    "start": "npm run dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AdamZh1/RecipeFinder.git"
+  },
+  "author": "Adam Zhou",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AdamZh1/RecipeFinder/issues"
+  },
+  "homepage": "https://github.com/AdamZh1/RecipeFinder#readme"
+}
