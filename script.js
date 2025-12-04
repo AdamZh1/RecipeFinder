@@ -6,7 +6,7 @@ const form = document.getElementById("search-form");
 const input = document.getElementById("ingredients-input");
 const resultsEl = document.getElementById("results");
 const statusEl = document.getElementById("status");
-const favsBtn = document.getElementById("favorites-btn");
+//const favsBtn = document.getElementById("favorites-btn");
 
 //Modal
 const modal = document.getElementById("modal");
